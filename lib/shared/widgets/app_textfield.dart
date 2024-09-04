@@ -1,5 +1,5 @@
-import 'package:accrue_clone/shared/app_color.dart';
-import 'package:accrue_clone/shared/shared_widgets.dart';
+import 'package:accrue_clone/shared/widgets/app_color.dart';
+import 'package:accrue_clone/shared/widgets/shared_widgets.dart';
 import 'package:flutter/material.dart';
 
 class AppTextField extends StatelessWidget {

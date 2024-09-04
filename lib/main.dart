@@ -1,4 +1,4 @@
-import 'package:accrue_clone/presentation/features/auth/sign_in_screen.dart';
+import 'package:accrue_clone/featues/auth/view/sign_in_screen.dart';
 import 'package:accrue_clone/theme_data.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +14,6 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         theme: appTheme,
         debugShowCheckedModeBanner: false,
-        home: SignInScreen());
+        home: const SignInScreen());
   }
 }

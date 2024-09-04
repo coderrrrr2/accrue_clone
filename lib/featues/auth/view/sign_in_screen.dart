@@ -1,8 +1,8 @@
-import 'package:accrue_clone/shared/app_button.dart';
-import 'package:accrue_clone/shared/app_column.dart';
-import 'package:accrue_clone/shared/app_textField.dart';
-import 'package:accrue_clone/shared/shared_widgets.dart';
-import 'package:accrue_clone/shared/text.dart';
+import 'package:accrue_clone/shared/widgets/app_button.dart';
+import 'package:accrue_clone/shared/widgets/app_column.dart';
+import 'package:accrue_clone/shared/widgets/app_textfield.dart';
+import 'package:accrue_clone/shared/widgets/shared_widgets.dart';
+import 'package:accrue_clone/shared/widgets/text.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatefulWidget {
