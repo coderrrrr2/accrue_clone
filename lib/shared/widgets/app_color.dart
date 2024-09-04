@@ -14,3 +14,7 @@ const lightGreyColor =
     Color.fromRGBO(153, 153, 153, 1.0); // RGB: (153, 153, 153)
 const extraLightGreyColor =
     Color.fromRGBO(204, 204, 204, 1.0); // RGB: (204, 204, 204)
+
+const lightGrey = Color.fromRGBO(128, 125, 119, 1);
+
+const orangeColor = Color.fromRGBO(237, 141, 54, 1);

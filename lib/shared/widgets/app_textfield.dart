@@ -56,10 +56,10 @@ class AppTextField extends StatelessWidget {
               header!,
               style: TextStyle(
                 fontSize: headerFontSize,
-                fontWeight: headerFontWeight,
+                fontWeight: headerFontWeight ?? FontWeight.w600,
               ),
             ),
-            addHeight(10),
+            addHeight(13),
           ],
           TextFormField(
             onTap: ontap,
@@ -73,7 +73,8 @@ class AppTextField extends StatelessWidget {
               hintText: hintText,
               prefixIcon: prefixWidget,
               suffixIcon: suffixWidget,
-              hintStyle: hintStyle ?? const TextStyle(color: blackColor),
+              hintStyle:
+                  hintStyle ?? const TextStyle(color: lightGrey, fontSize: 18),
               fillColor: fillColor ?? whiteColor, // Example default color
               filled: true,
 

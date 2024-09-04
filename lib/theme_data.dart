@@ -4,4 +4,6 @@ import 'package:flutter/material.dart';
 final colorScheme = ColorScheme.fromSeed(seedColor: primaryColor);
 
 final appTheme = ThemeData(
-    colorScheme: colorScheme, scaffoldBackgroundColor: scaffoldBackGroundColor);
+    appBarTheme: const AppBarTheme(backgroundColor: scaffoldBackGroundColor),
+    colorScheme: colorScheme,
+    scaffoldBackgroundColor: scaffoldBackGroundColor);
