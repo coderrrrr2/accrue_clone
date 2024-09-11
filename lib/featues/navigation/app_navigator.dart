@@ -2,58 +2,38 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 class AppNavigator {
-  /// Navigate to a new screen.
-  static void to(Widget page, {dynamic arguments}) {
-    Get.to(page, arguments: arguments);
-  }
-
-  /// Navigate to a named route.
-  static void toNamed(String routeName, {dynamic arguments}) {
+  /// Push a new named route onto the stack.
+  static void pushRoute(String routeName, {dynamic arguments}) {
     Get.toNamed(routeName, arguments: arguments);
   }
 
-  /// Replace the current screen with a new one.
-  static void off(Widget page, {dynamic arguments}) {
-    Get.off(page, arguments: arguments);
-  }
-
-  /// Replace the current screen with a named route.
-  static void offNamed(String routeName, {dynamic arguments}) {
+  /// Replace the current route with a new named route.
+  static void replaceRoute(String routeName, {dynamic arguments}) {
     Get.offNamed(routeName, arguments: arguments);
   }
 
-  /// Remove all previous screens and push a new one.
-  static void offAll(Widget page, {dynamic arguments}) {
-    Get.offAll(page, arguments: arguments);
-  }
-
-  /// Remove all previous screens and push a named route.
-  static void offAllNamed(String routeName, {dynamic arguments}) {
+  /// Clear the entire route stack and push a new named route.
+  static void replaceAllRoutes(String routeName, {dynamic arguments}) {
     Get.offAllNamed(routeName, arguments: arguments);
   }
 
-  /// Navigate back to the previous screen.
-  static void back({dynamic result}) {
+  /// Navigate back to the previous route.
+  static void popRoute({dynamic result}) {
     Get.back(result: result);
   }
 
-  /// Navigate back to the previous screen with additional result data.
-  static void backWithResult(dynamic result) {
-    Get.back(result: result);
-  }
-
-  /// Check if there is a previous screen to go back to.
-  static bool canPop() {
+  /// Check if there is a previous route to pop to.
+  static bool canPopRoute() {
     return Get.key.currentState?.canPop() ?? false;
   }
 
-  /// Go back to the first screen in the stack.
-  static void popUntilFirst() {
+  /// Pop routes until the first route in the stack.
+  static void popUntilFirstRoute() {
     Get.until((route) => route.isFirst);
   }
 
-  /// Navigate to a screen and clear the history up to the given predicate.
-  static void popUntil(RoutePredicate predicate) {
+  /// Pop routes until the specified predicate is met.
+  static void popUntilRoute(RoutePredicate predicate) {
     Get.until(predicate);
   }
 }

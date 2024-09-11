@@ -1,4 +1,4 @@
-import 'package:accrue_clone/featues/auth/view/sign_in_screen.dart';
+import 'package:accrue_clone/featues/navigation/all_pages.dart';
 import 'package:accrue_clone/theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
@@ -13,8 +13,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        theme: appTheme,
-        debugShowCheckedModeBanner: false,
-        home: const SignInScreen());
+      initialRoute: AppPages.initial,
+      theme: appTheme,
+      debugShowCheckedModeBanner: false,
+      getPages: AppPages.routes,
+    );
   }
 }

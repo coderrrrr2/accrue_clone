@@ -1,3 +1,5 @@
+import 'package:accrue_clone/featues/home/presentation/routes/routes.dart';
+import 'package:accrue_clone/featues/navigation/app_navigator.dart';
 import 'package:accrue_clone/shared/assets.dart';
 import 'package:accrue_clone/shared/widgets/app_button.dart';
 import 'package:accrue_clone/shared/widgets/app_color.dart';
@@ -62,7 +64,9 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             addHeight(50),
             AppButton(
-              onPressed: () {},
+              onPressed: () {
+                AppNavigator.pushRoute(HomeRoutes.mainView);
+              },
               text: "Log in",
             ),
             addHeight(40),
