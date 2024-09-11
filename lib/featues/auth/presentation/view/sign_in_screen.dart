@@ -42,74 +42,71 @@ class _SignInScreenState extends State<SignInScreen> {
         actions: [const ClickableText(text: "Having issues?"), addWidth(20)],
       ),
       body: AppColumn(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const LeadingText(text: "Welcome back"),
-            addHeight(5),
-            const TrailingText(
-              text: "Sign in with your email to contiue.",
-            ),
-            addHeight(40),
-            AppTextField(
-              hintText: 'Enter your email',
-              controller: emailController,
-              header: "Your Email",
-            ),
-            addHeight(20),
-            AppTextField(
-              hintText: 'Enter your password',
-              controller: passwordController,
-              header: "Your password",
-            ),
-            addHeight(50),
-            AppButton(
-              onPressed: () {
-                AppNavigator.pushRoute(HomeRoutes.mainView);
-              },
-              text: "Log in",
-            ),
-            addHeight(40),
-            Center(
-              child: ClickableText(
-                style: const TextStyle(
-                    fontSize: 18,
-                    color: orangeColor,
-                    fontWeight: FontWeight.w600),
-                text: "Forgot Password?",
-                onTap: () {},
-              ),
-            ),
-            addHeight(32),
-            ClickableText(
-              centered: true,
-              content: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.fingerprint, color: blackColor),
-                  addWidth(5),
-                  const Text(
-                    "Login With Biometrics",
-                    style: TextStyle(
-                        color: blackColor,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 17),
-                  )
-                ],
-              ),
+        children: [
+          const LeadingText(text: "Welcome back"),
+          addHeight(5),
+          const TrailingText(
+            text: "Sign in with your email to contiue.",
+          ),
+          addHeight(40),
+          AppTextField(
+            hintText: 'Enter your email',
+            controller: emailController,
+            header: "Your Email",
+          ),
+          addHeight(20),
+          AppTextField(
+            hintText: 'Enter your password',
+            controller: passwordController,
+            header: "Your password",
+          ),
+          addHeight(50),
+          AppButton(
+            onPressed: () {
+              AppNavigator.pushRoute(HomeRoutes.mainView);
+            },
+            text: "Log in",
+          ),
+          addHeight(40),
+          Center(
+            child: ClickableText(
+              style: const TextStyle(
+                  fontSize: 18,
+                  color: orangeColor,
+                  fontWeight: FontWeight.w600),
+              text: "Forgot Password?",
               onTap: () {},
             ),
-            addHeight(45),
-            const CenteredText(
-              text: "Or log in with",
-              style: TextStyle(color: lightGrey, fontSize: 17),
+          ),
+          addHeight(32),
+          ClickableText(
+            centered: true,
+            content: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.fingerprint, color: blackColor),
+                addWidth(5),
+                const Text(
+                  "Login With Biometrics",
+                  style: TextStyle(
+                      color: blackColor,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 17),
+                )
+              ],
             ),
-            addHeight(15),
-            _buildGoogleLoginCotnainer(
-              () {},
-            )
-          ],
-        ),
+            onTap: () {},
+          ),
+          addHeight(45),
+          const CenteredText(
+            text: "Or log in with",
+            style: TextStyle(color: lightGrey, fontSize: 17),
+          ),
+          addHeight(15),
+          _buildGoogleLoginCotnainer(
+            () {},
+          )
+        ],
       ),
     );
   }

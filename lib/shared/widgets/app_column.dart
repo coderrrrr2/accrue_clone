@@ -4,11 +4,11 @@ class AppColumn extends StatelessWidget {
   final bool isScrollable;
   final bool isLoading;
   final EdgeInsetsGeometry? padding;
-  final Widget body;
+  final List<Widget> children;
   const AppColumn(
       {super.key,
       this.isScrollable = false,
-      required this.body,
+      required this.children,
       this.isLoading = false,
       this.padding});
 
@@ -29,7 +29,10 @@ class AppColumn extends StatelessWidget {
                   padding: padding ??
                       const EdgeInsets.symmetric(horizontal: 20)
                           .copyWith(top: 20),
-                  child: body),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: children,
+                  )),
             ),
           )
         : GestureDetector(
@@ -42,11 +45,8 @@ class AppColumn extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 20)
                         .copyWith(top: 20),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    body,
-                  ],
-                ),
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: children),
               ),
             ),
           );

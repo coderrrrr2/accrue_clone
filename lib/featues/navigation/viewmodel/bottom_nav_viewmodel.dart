@@ -1,12 +1,14 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class BottomNavViewmodel extends ChangeNotifier {
-  int _currentIndex = 0;
-
-  int get currentIndex => _currentIndex;
+class BottomNavIndexManager extends StateNotifier<int> {
+  BottomNavIndexManager() : super(0);
 
   void updateIndex(int index) {
-    _currentIndex = index;
-    notifyListeners();
+    state = index;
   }
 }
+
+final indexManagerProvider =
+    StateNotifierProvider<BottomNavIndexManager, int>((ref) {
+  return BottomNavIndexManager();
+});

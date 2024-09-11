@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class AppButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
+  final Color? backgroundColor;
+  final Size? buttonSize;
   final double? textSize;
   final Widget? content;
   const AppButton(
@@ -10,6 +12,8 @@ class AppButton extends StatelessWidget {
       required this.onPressed,
       this.text = "",
       this.content,
+      this.backgroundColor,
+      this.buttonSize,
       this.textSize});
 
   @override
@@ -19,8 +23,8 @@ class AppButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          backgroundColor: Colors.black,
-          minimumSize: const Size(600, 70)),
+          backgroundColor: backgroundColor ?? Colors.black,
+          minimumSize: buttonSize ?? const Size(600, 70)),
       child: text.isNotEmpty
           ? Text(
               text,

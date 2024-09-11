@@ -1,10 +1,11 @@
 import 'package:accrue_clone/featues/navigation/all_pages.dart';
 import 'package:accrue_clone/theme_data.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/route_manager.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const ProviderScope(child: MainApp()));
 }
 
 class MainApp extends StatelessWidget {
